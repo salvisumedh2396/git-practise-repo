@@ -1,0 +1,19 @@
+1.Arizona State University
+2.University Of California, Irvine
+3.Northeastern University
+4.Rutgers, The State University of New Jersey
+5.North Carolina State University
+6.University of Southern California (Viterbi)
+7.New York University
+8.Virginia Tech
+9.Purdue University--West Lafayette
+10.Stony Brook University-- SUNY
+
+Texas A&M University
+University of California Davis
+San Jose State University
+
+
+
+University of Washington
+University of Colorado--Boulder
