@@ -1,0 +1,3190 @@
+Pattern 6:
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int range = scn.nextInt();
+        
+        int tb=1;
+        int str = range + 1;
+        
+        for(int i=1;i<=range;i++){
+            
+            for(int j=1;j<=str/2;j++){
+                System.out.print("*\t");
+            }
+            
+            for(int k=1;k<=tb;k++){
+                System.out.print("\t");
+            }
+            
+            for(int l=1;l<=str/2;l++){
+                System.out.print("*\t");
+            }
+            
+            System.out.println();
+            
+            if(i<=range/2){
+                tb = tb+2;
+                str = str-2;
+            }else{
+                tb = tb-2;
+                str  = str + 2;
+            }
+            
+            
+        }
+
+    }
+}
+
+
+Pattern 8:
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int range = scn.nextInt();
+        
+        for(int i=0;i<range;i++){
+            for(int j=1;j<=range;j++){
+                if(j==(range-i)){
+                    System.out.print("*");
+                }else{
+                    System.out.print("\t");
+                }
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+Pattern 9:
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+         int range = scn.nextInt();
+     
+         for(int i=1;i<=range;i++){
+             for(int j=1;j<=range;j++){
+                 if(i==j || (i+j)==(range+1)){
+                     //System.out.println("In star "+i+" "+j+" "+range);
+                     System.out.print("*\t");
+                 }else {
+                      //System.out.println("In tab "+i+" "+j+" "+range);
+                     System.out.print("\t");
+                 }
+             }
+             System.out.println();
+         }
+
+    }
+}
+
+Pattern 11:
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int range = scn.nextInt();
+        int count = 0;
+        int increment = 0;
+        
+        for(int i=1;i<=range;i++){
+            
+            increment = increment+1;
+            
+            for(int j=1;j<=increment;j++){
+                count++;
+                System.out.println(count+"\t");
+            }
+            
+            System.out.println();
+            
+        }
+
+    }
+}
+
+Pattern 12:
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int range = scn.nextInt();
+        int val1=0;
+        int val2=1;
+        
+        for(int i=1;i<=range;i++){
+            for(int j=1;j<=i;j++){
+                System.out.print(val1+"\t");
+                int temp = val1+val2;
+                val1 = val2;
+                val2 = temp;
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+Pattern 13:
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner scn = new Scanner(System.in);
+
+        //write your code here
+        int range = scn.nextInt();
+        
+        for(int i=0;i<range;i++){
+            int icj = 1;
+            for(int j=0;j<=i;j++){
+                System.out.print(icj+"\t");
+                int icjp1 = icj * (i-j)/(j+1);
+                icj = icjp1;
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+Pattern 10:
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+
+     // write ur code here
+     int range = scn.nextInt();
+     int outerSpace = range/2;
+     int innerSpace = -1;
+     
+     for(int i=1;i<=range;i++){
+         //System.out.println(os+", "+is);
+         
+         for(int j=1;j<=outerSpace;j++){
+             System.out.print("\t");
+         }
+         
+         System.out.print("*\t");
+         
+         for(int j=1;j<=innerSpace;j++){
+             System.out.print("\t");
+         }
+         
+         if(i>1 && i<range){
+             System.out.print("*\t");
+         }
+         
+         if(i<=range/2){
+             outerSpace--;
+             innerSpace = innerSpace +2;
+         }else{
+             outerSpace++;
+             innerSpace = innerSpace -2;
+         }
+         
+         System.out.println();
+     }
+
+ }
+}
+
+Pattern 15:
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int range = scn.nextInt();
+        
+        int spaces = range/2;
+        int str = 1;
+        int numberCount=1;
+
+        for(int i=1;i<=range;i++){
+            
+            for(int j=1;j<=spaces;j++){
+                System.out.print("\t");
+            }
+            
+            for(int k=0;k<str;k++){
+                
+                if(k==0){
+                    System.out.print(numberCount+"\t");
+                }else if(k<=str/2){
+                    numberCount++;
+                    System.out.print(numberCount+"\t");
+                }else{
+                    numberCount--;
+                    System.out.print(numberCount+"\t");
+                }
+                
+            }
+            
+            if(i<=range/2){
+                str = str+2;
+                spaces--;
+                numberCount++;
+            }else{
+                str = str-2;
+                spaces++;
+                numberCount--;
+            }
+            
+            System.out.println();
+            
+        }
+
+    }
+}
+
+Pattern 16:
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+
+     // write ur code here
+     int range = scn.nextInt();
+     
+     int spaces = 2*range-3;
+     int numberCount = 1;
+     
+     for(int i=1;i<=range;i++){
+         
+         for(int j=1;j<=numberCount;j++){
+             System.out.print(j+"\t");
+         }
+         
+         for(int k=1;k<=spaces;k++){
+             System.out.print("\t");
+         }
+         
+         if(spaces<=0){
+              for(int k=numberCount-1;k>=1;k--){
+                System.out.print(k+"\t");
+              }
+         }else{
+             for(int k=numberCount;k>=1;k--){
+                System.out.print(k+"\t");
+            }
+         }
+         
+         
+         System.out.println();
+         
+         numberCount++;
+         spaces = spaces-2;
+         
+     }
+
+ }
+}
+
+Pattern 17:
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int arrowHeight = scn.nextInt();
+        int arrowWidth = arrowHeight/2;
+        
+        int arrowCenter = (arrowHeight/2)+1;
+        int str=1;
+        
+        for(int i=1;i<=arrowHeight;i++){
+            
+            if(i!=arrowCenter){
+                for(int j=1;j<=arrowWidth;j++){
+                    System.out.print("\t");
+                }
+            }else{
+                for(int j=1;j<=arrowWidth;j++){
+                    System.out.print("*\t");
+                }
+            }
+            
+            for(int k=1;k<=str;k++){
+                System.out.print("*\t");
+            }
+            
+            if(i<=(arrowHeight/2)){
+                str++;
+            }else{
+                str--;
+            }
+            
+            System.out.println();
+            
+        }
+
+    }
+}
+
+Pattern 18:
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+
+     // write ur code here
+     int range = scn.nextInt();
+     
+     int str = range;
+     int spaces = 0;
+     
+     for(int i=1;i<=range;i++){
+         
+         for(int j=1;j<=spaces;j++){
+             System.out.print("\t");
+         }
+         
+         if(i<=range/2 && i!=1){
+             System.out.print("*\t");
+             
+             for(int m=1;m<=str-2;m++){
+                 System.out.print("\t");
+             }
+             
+             System.out.print("*\t");
+             
+         }else{
+             for(int k=1;k<=str;k++){
+             System.out.print("*\t");
+            }
+         }
+         
+         for(int l=1;l<=spaces;l++){
+             System.out.print("\t");
+         }
+         
+         if(i<=range/2){
+             str = str-2;
+             spaces++;
+         }else{
+             str = str+2;
+             spaces--;
+         }
+         
+         System.out.println();
+         
+     }
+
+ }
+}
+
+Pattern 19:
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+
+     // write ur code here
+     int size = scn.nextInt();
+     
+     for(int i=1;i<=size;i++){
+         
+         if(i<(size/2)+1){
+             
+             for(int j=1;j<=(size/2);j++){
+                 
+                 if(i==1){
+                     System.out.print("*\t");
+                 }else{
+                     System.out.print("\t");
+                 }
+                 
+             }
+             
+             System.out.print("*\t");
+             
+             for(int k=1;k<=(size/2)-1;k++){
+                 System.out.print("\t");
+             }
+             
+             System.out.print("*\t");
+             
+             
+         }else if(i==(size/2)+1){
+             
+             for(int l=1;l<=size;l++){
+                 System.out.print("*\t");
+             }
+             
+         }else{
+             
+             System.out.print("*\t");
+             
+             for(int k=1;k<=(size/2)-1;k++){
+                 System.out.print("\t");
+             }
+             
+             System.out.print("*\t");
+             
+             for(int j=1;j<=(size/2);j++){
+                 if(i==size){
+                     System.out.print("*\t");
+                 }else{
+                     System.out.print("\t");
+                 }
+             }
+             
+         }
+         
+         System.out.println();
+         
+     }
+
+ }
+}
+
+Pattern 20:
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+
+        // write ur code here
+        int range = scn.nextInt();
+        int innerSpace = -1;
+        int outerSpace = (range/2)-1;
+        
+        for(int i=1;i<=range;i++){
+            
+            System.out.print("*\t");
+            
+            if(i<=range/2 || i==range){
+                
+                for(int j=1;j<=range-2;j++){
+                    System.out.print("\t");
+                }
+                
+            }else if(i>range/2 && i!=range){
+                
+                for(int j=1;j<=outerSpace;j++){
+                    System.out.print("\t");
+                }
+                
+                System.out.print("*\t");
+                
+                for(int k=1;k<=innerSpace;k++){
+                    System.out.print("\t");    
+                }
+                
+                if(i!=(range/2)+1){
+                    System.out.print("*\t");
+                }
+                
+                for(int j=1;j<=outerSpace;j++){
+                    System.out.print("\t");
+                }
+                
+                outerSpace--;
+                innerSpace = innerSpace+2;
+                
+            }
+            
+            if(range!=1){
+                System.out.print("*\t");
+            }
+            
+            System.out.println();
+            
+        }
+
+    }
+}
+
+AnyBase to AnyBase conversion
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+      int n = scn.nextInt();
+      int sourceBase = scn.nextInt();
+     int  destBase= scn.nextInt();
+     
+     int sum = convertSourceBaseToDecimal(n,sourceBase);
+     int finalNumber = convertDecimalToDestbase(sum,destBase);
+     System.out.println(finalNumber);
+   }   
+   
+   public static int convertSourceBaseToDecimal(int n, int sourceBase){
+       
+       int multiplier = 1;
+       int sum = 0;
+       
+       while(n!=0){
+           int temp = n%10;
+           n = n/10;
+           sum = sum + temp * multiplier;
+           multiplier = multiplier * sourceBase; 
+           
+       }
+       
+       return sum;
+       
+   }
+   
+   public static int convertDecimalToDestbase(int sum,int destBase){
+       
+       int multiplier = 1;
+       int sum2 = 0;
+       
+       while(sum!=0){
+           int temp = sum%destBase;
+           sum = sum/destBase;
+           sum2 = sum2 + temp * multiplier;
+           multiplier = multiplier * 10;
+       }
+       
+       return sum2;
+       
+   }
+   
+  }
+
+
+Any Base Addition
+
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+      int b = scn.nextInt();
+      int n1 = scn.nextInt();
+      int n2 = scn.nextInt();
+  
+      int d = getSum(b, n1, n2);
+      System.out.println(d);
+   }
+  
+   public static int getSum(int b, int n1, int n2){
+       // write ur1 code here
+       int n1Digit = 0;
+       int n2Digit = 0;
+       int sum = 0;
+       int carry = 0;
+       int digitSum = 0;
+       int multiplier = 1;
+       
+       while(n1!=0 || n2!=0 || carry==1){
+           if(n1==0){
+               n1Digit = 0;
+           }else{
+               n1Digit = n1%10;
+               n1 = n1/10;
+           }
+           
+           if(n2==0){
+               n2Digit = 0;
+           }else{
+               n2Digit = n2%10;
+               n2 = n2/10;
+           }
+           
+           digitSum = n1Digit+n2Digit+carry;
+           
+           if(digitSum>=b){
+               carry = 1;
+               digitSum = digitSum - b;
+           }else{
+               carry = 0;
+           }
+           
+           sum = sum + digitSum * multiplier;
+           /*System.out.println("n1 digit: "+n1Digit);
+           System.out.println("n2 digit: "+n2Digit);
+           System.out.println("carry: "+carry);
+           System.out.println("Partial sum: "+sum);*/
+           multiplier = multiplier * 10;
+           
+       }
+       
+       return sum;
+   }
+  }
+
+
+Any Base Subtraction:
+
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      Scanner scn = new Scanner(System.in);
+      int b = scn.nextInt();
+      int n1 = scn.nextInt();
+      int n2 = scn.nextInt();
+  
+      int d = getDifference(b, n1, n2);
+      System.out.println(d);
+   }
+  
+   public static int getDifference(int b, int n1, int n2){
+       // write your code here
+       int n1Digit = 0;
+       int n2Digit = 0;
+       int digitDifference = 0;
+       int borrow = 0;
+       int sum = 0;
+       int multiplier =1;
+       
+       while(n1!=0 || n2!=0){
+           n1Digit = n1%10;
+           n2Digit = n2%10;
+           
+           n1 = n1/10;
+           n2 = n2/10;
+           
+           n2Digit = n2Digit + borrow;
+           
+           if(n1Digit>n2Digit){
+               borrow = -1;
+               n2Digit = n2Digit + b;
+           }else{
+               borrow = 0;
+           }
+           
+           digitDifference = n2Digit-n1Digit;
+           
+           /*System.out.println("n1 digit: "+n1Digit);
+           System.out.println("n2 digit: "+n2Digit);
+           System.out.println("borrow: "+borrow);
+           System.out.println("Partial sum: "+sum);*/
+           
+           sum = sum + digitDifference * multiplier;
+           multiplier = multiplier * 10;
+           
+       }
+       
+       return sum;
+   }
+  
+  }
+
+Any Base Multiplication:
+
+Failed Attempt:
+
+package comparator;
+
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    int b = 5; //scn.nextInt();
+    int n1 = 1220;//scn.nextInt();
+    int n2 = 31;//scn.nextInt();
+
+    int d = getProduct(b, n1, n2);
+    System.out.println(d);
+ }
+
+ public static int getProduct(int b, int n1, int n2){
+     // write your code here
+     
+     int n2Digit = 0;
+     int n1Digit = 0;
+     int sum = 0;
+     int temp = 0;
+     int carry = 0;
+     int product = 0;
+     int remainder = 0;
+     int quotient = 0;
+     int outerMultiplier = 0;
+     int innerMultiplier = 0;
+     int interimSum = 0;
+     int sumDigit = 0;
+     int tempSum = 0;
+     
+     while(n2!=0){
+         
+         n2Digit = n2%10;
+         n2 = n2/10;
+         
+         temp = n1;
+         
+         innerMultiplier = outerMultiplier;
+         
+         while(temp!=0){
+             
+             n1Digit = temp%10;
+             temp = temp/10;
+             
+             product = (n1Digit * n2Digit) + quotient;
+             
+             if(product>b){
+                 remainder = product%b;
+                 quotient = product/b;
+                 interimSum = 0;
+             }else {
+            	 interimSum = product;
+            	 quotient = 0;
+            	 remainder = 0;
+             }
+             
+             sumDigit = (sum/(int)Math.pow(10,innerMultiplier))%10;
+             interimSum = interimSum + sumDigit + remainder + carry;
+             
+             if(interimSum>b){
+                 carry = interimSum/b;
+                 interimSum = interimSum%b;
+             }else {
+            	 carry = 0;
+             }
+             
+             tempSum = tempSum + interimSum * (int)Math.pow(10,innerMultiplier);
+             //multiplier = multiplier * 10;
+             innerMultiplier++;
+             
+         }
+         sum =tempSum;
+         tempSum = 0;
+         outerMultiplier++;
+     }
+     
+     return sum;
+ }
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+package comparator;
+
+import java.util.Scanner;
+
+public class Maintry{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    int b = scn.nextInt();
+    int n1 = scn.nextInt();
+    int n2 = scn.nextInt();
+
+    int d = getProduct(b, n1, n2);
+    System.out.println(d);
+ }
+
+ public static int getProduct(int b, int n1, int n2){
+     // write your code here
+     
+     int n2Digit = 0;
+     int n1Digit = 0;
+     int sum = 0;
+     int temp = 0;
+     int carry = 0;
+     int product = 0;
+     int remainder = 0;
+     int quotient = 0;
+     int outerMultiplier = 0;
+     int innerMultiplier = 0;
+     int interimSum = 0;
+     int sumDigit = 0;
+     int tempSum = 0;
+     
+     while(n2!=0){
+         
+         n2Digit = n2%10;
+         n2 = n2/10;
+         
+         temp = n1;
+         
+         innerMultiplier = outerMultiplier;
+         
+         while(temp!=0 || quotient!=0 || carry!=0){
+             
+             n1Digit = temp%10;
+             temp = temp/10;
+             
+             product = (n1Digit * n2Digit) + quotient;
+             
+             if(product>b){
+                 remainder = product%b;
+                 quotient = product/b;
+                 interimSum = remainder;
+             }else {
+            	 interimSum = product;
+            	 quotient = 0;
+            	 remainder = 0;
+             }
+             
+             /*sumDigit = (sum/(int)Math.pow(10,innerMultiplier))%10;
+             interimSum = interimSum + sumDigit + remainder + carry;
+             
+             if(interimSum>=b){
+                 carry = interimSum/b;
+                 interimSum = interimSum%b;
+             }else {
+            	 carry = 0;
+             }*/
+             
+             tempSum = tempSum + interimSum * (int)Math.pow(10,innerMultiplier);
+             System.out.println("Tempsum: "+tempSum);
+             //multiplier = multiplier * 10;
+             innerMultiplier++;
+             
+         }
+         
+         sum = getAddition(tempSum,sum,b);
+         
+         /*sum =tempSum;*/
+         tempSum = 0;
+         outerMultiplier++;
+     }
+     
+     return sum;
+ }
+ 
+ public static int getAddition(int tempSum, int sum, int b){
+	 
+	 int n1Digit = 0;
+     int n2Digit = 0;
+     int carry = 0;
+     int digitSum = 0;
+     int multiplier = 1;
+     int finalSum = 0;
+     
+     if(sum!=0) {
+	     while(tempSum!=0 || sum!=0 || carry==1){
+	         if(tempSum==0){
+	             n1Digit = 0;
+	         }else{
+	             n1Digit = tempSum%10;
+	             tempSum = tempSum/10;
+	         }
+	         
+	         if(sum==0){
+	             n2Digit = 0;
+	         }else{
+	             n2Digit = sum%10;
+	             sum = sum/10;
+	         }
+	         
+	         digitSum = n1Digit+n2Digit+carry;
+	         
+	         if(digitSum>=b){
+	        	 carry = digitSum/b;
+	        	 digitSum = digitSum%b;
+	         }else{
+	             carry = 0;
+	         }
+	         
+	         finalSum = finalSum + digitSum * multiplier;
+	         /*System.out.println("n1 digit: "+n1Digit);
+	         System.out.println("n2 digit: "+n2Digit);
+	         System.out.println("carry: "+carry);
+	         System.out.println("Partial sum: "+sum);*/
+	         multiplier = multiplier * 10;
+	         
+	     }
+     }else {
+    	 finalSum = tempSum;
+     }
+     
+     return finalSum;
+ }
+ 
+
+}
+
+Span of array:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    
+    Scanner scn = new Scanner(System.in);
+    int range = scn.nextInt();
+    
+    int[] arr = new int[range];
+    int max = 0;
+    int min = 0;
+    int span = 0;
+    
+    for(int i=0;i<=range;i++){
+        arr[i] = scn.nextInt();
+    }
+    
+    max = arr[0];
+    min = arr[0];
+    
+    for(int i=1;i<=arr.lenght;i++){
+        
+        if(max<arr[i]){
+            max = arr[i];
+        }
+        
+        if(min>arr[i]){
+            min = arr[i];
+        }
+        
+    }
+    
+    span = max-min;
+    System.out.println(span);
+    
+ }
+
+}
+
+Bar Chart:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    
+    Scanner scn = new Scanner(System.in);
+    int range = scn.nextInt();
+    
+    int[] arr = new int[range];
+    int max = 0;
+    int[] arr2 = new int[range];
+    
+    for(int i=0;i<arr.length;i++){
+        arr[i] = scn.nextInt();
+    }
+    
+    max = arr[0];
+    
+    for(int i=1;i<arr.length;i++){
+        if(arr[i]>max){
+            max = arr[i];
+        }
+    }
+    
+    for(int i=0;i<arr.length;i++){
+        arr2[i] = max - arr[i];
+    }
+    
+    for(int i=0;i<max;i++){
+        for(int j=0;j<arr2.length;j++){
+            if(arr2[j]==0){
+                System.out.print("*\t");
+            }else{
+                System.out.print("\t");
+                arr2[j] = arr2[j]-1;
+            }
+        }
+        System.out.println();
+    }
+    
+ }
+
+}
+
+Sum of two arrays:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    
+    Scanner scn = new Scanner(System.in);
+    int n1 = scn.nextInt();
+    
+    int[] arr = new int[n1];
+    
+    for(int i=0;i<arr.length;i++){
+        arr[i] = scn.nextInt();
+    }
+    
+    int n2  = scn.nextInt();
+    
+    int[] arr2 = new int[n2];
+    
+    for(int i=0;i<arr2.length;i++){
+        arr2[i] = scn.nextInt();
+    }
+    
+    int[] arr3;
+    int diff = 0;
+    int range = 0;
+    
+    if(n1>n2){
+        arr3 = new int[n1];
+        diff = n1-n2;
+        range = n1;
+    }else{
+        arr3 = new int[n2];
+        diff = n2-n1;
+        range = n2;
+    }
+    
+    int temp = diff;
+    
+    while(temp!=0){
+        arr3[temp-1] = 0;
+        temp--;
+    }
+    
+    if(n1>n2){
+        for(int i=0;i<arr2.length;i++){
+            arr3[i+diff] = arr2[i];
+        }
+    }else{
+        for(int i=0;i<arr.length;i++){
+            arr3[i+diff] = arr[i];
+        }
+    }
+    
+    int[] arr4 = new int[range];
+    
+    if(n1>n2){
+        for(int i=0;i<range;i++){
+            
+            arr4[i] = arr3[i] + arr[i];
+        }
+    }else{
+        for(int i=0;i<range;i++){
+            arr4[i] = arr3[i] + arr2[i];
+        }
+    }
+    
+    
+    for(int i=0;i<range;i++){
+        System.out.println(arr4[i]);
+    }
+    
+ }
+
+}
+
+Attempt 2:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    
+    Scanner scn = new Scanner(System.in);
+    int n1 = scn.nextInt();
+    
+    int[] arr = new int[n1];
+    
+    for(int i=0;i<arr.length;i++){
+        arr[i] = scn.nextInt();
+    }
+    
+    int n2  = scn.nextInt();
+    
+    int[] arr2 = new int[n2];
+    
+    for(int i=0;i<arr2.length;i++){
+        arr2[i] = scn.nextInt();
+    }
+    
+    int[] arr3;
+    int diff = 0;
+    int range = 0;
+    
+    if(n1>n2){
+        arr3 = new int[n1];
+        diff = n1-n2;
+        range = n2;
+        
+        for(int i=0;i<diff;i++){
+            arr3[i] = arr[i];
+        }
+        
+        for(int i=0;i<range;i++){
+            arr3[i+diff] = arr[i+diff] + arr2[i];
+        }
+        
+        for(int i=0;i<n1;i++){
+            System.out.println(arr3[i]);
+        }
+    
+    }else{
+        arr3 = new int[n2];
+        diff = n2-n1;
+        range = n1;
+        
+        for(int i=0;i<diff;i++){
+            arr3[i] = arr2[i];
+        }
+        
+        for(int i=0;i<range;i++){
+            arr3[i+diff] = arr2[i+diff] + arr[i];
+        }
+        
+        for(int i=0;i<n2;i++){
+            System.out.println(arr3[i]);
+        }
+    
+    }
+    
+ }
+
+}
+
+Attempt 3:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    
+    int n1 = scn.nextInt();
+    int[] arr = new int[n1];
+    
+    for(int i=0;i<arr.length;i++){
+        arr[i] = scn.nextInt();
+    }
+    
+    int n2  = scn.nextInt();
+    int[] arr2 = new int[n2];
+    
+    for(int i=0;i<arr2.length;i++){
+        arr2[i] = scn.nextInt();
+    }
+    
+    int[] arr3 = new int[n1>n2? n1:n2];
+    int carry = 0;
+    
+    int i = arr.length - 1;
+    int j = arr2.length - 1;
+    int k = arr3.length - 1;
+    
+    while(k>=0){
+        
+        int d = carry;
+        
+        if(i>=0){
+            d = d+arr[i];
+        }
+        
+        if(j>=0){
+            d = d+arr2[j];
+        }
+        
+        carry = d/10;
+        d = d%10;
+        
+        arr3[k] = d;
+        
+        i--;
+        j--;
+        k--;
+        
+    }
+    
+    if(carry!=0){
+        System.out.println(carry);
+    }
+    
+    for(int val: arr3){
+        System.out.println(val);
+    }
+    
+    
+ }
+
+}
+
+Difference of two arrays:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int n1 = scn.nextInt();
+    
+    int[] arr1 = new int[n1];
+    
+    for(int i=0; i<n1;i++){
+        arr1[i] = scn.nextInt();
+    }
+    
+    int n2 = scn.nextInt();
+    
+    int[] arr2 = new int[n2];
+    
+    for(int i=0; i<n2;i++){
+        arr2[i] = scn.nextInt();
+    }
+    
+    int borrow = 0;
+    int digit1 = 0;
+    int digit2 = 0;
+    int[] arr3 = new int[n2];
+    int i = arr1.length - 1;
+    int j = arr2.length - 1;
+    int k = arr3.length - 1;
+    
+    while(k>=0){
+        
+        if(i>=0){
+            digit1 = arr1[i];
+        }else{
+            digit1 = 0;
+        }
+        
+        if(j>=0){
+            digit2 = arr2[j] - borrow;
+        }
+        
+        if(digit2<digit1){
+            digit2 = digit2 + 10;
+            borrow = 1;
+        }else{
+            borrow = 0;
+        }
+        
+        arr3[k] = digit2 - digit1;
+        
+        i--;
+        j--;
+        k--;
+        
+    }
+    
+    int flag = 0;
+    
+    for(int val:arr3){
+        if(val!=0 || flag==1){
+            flag = 1;
+            System.out.println(val);
+        }
+    }
+    
+ }
+
+}
+
+Reverse an array:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+  public static void display(int[] a){
+    StringBuilder sb = new StringBuilder();
+
+    for(int val: a){
+      sb.append(val + " ");
+    }
+    System.out.println(sb);
+  }
+
+  public static void reverse(int[] a){
+    // write your code here
+    int temp = 0;
+    int j = a.length-1;
+    int i=0;
+    
+    while(j>i){
+        temp = a[j];
+        a[j] = a[i];
+        a[i] = temp;
+        i++;
+        j--;
+    }
+    
+  }
+
+public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    int n = Integer.parseInt(br.readLine());
+    int[] a = new int[n];
+    for(int i = 0; i < n; i++){
+       a[i] = Integer.parseInt(br.readLine());
+    }
+
+    reverse(a);
+    display(a);
+ }
+
+}
+
+Rotate an array:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+  public static void display(int[] a){
+    StringBuilder sb = new StringBuilder();
+
+    for(int val: a){
+      sb.append(val + " ");
+    }
+    System.out.println(sb);
+  }
+
+  public static void rotate(int[] a, int k){
+    // write your code here
+    int reducedRotations = 0;
+    int finalIndex = a.length-1;
+    int arrayLength = a.length;
+    int actualRotations = 0;
+    int[] tempArray = new int[arrayLength];
+    
+    if(k>0 && k%arrayLength!=0){
+        
+        if(k>arrayLength){
+            reducedRotations = k%arrayLength;
+        }else{
+            reducedRotations = k;
+        }
+        
+        
+        for(int i=0;i<arrayLength;i++){
+            actualRotations = i+reducedRotations;
+            
+            if(actualRotations>finalIndex){
+                actualRotations = actualRotations - arrayLength;
+            }
+            
+            tempArray[actualRotations] = a[i];
+        }
+        
+    }else if(k<0 && k%arrayLength!=0){
+        
+        if(k<-(arrayLength)){
+            reducedRotations = k%arrayLength;
+        }else{
+            reducedRotations = k;
+        }
+        
+        
+        for(int i=0;i<arrayLength;i++){
+            actualRotations = i+reducedRotations;
+            
+            if(actualRotations<0){
+                actualRotations = actualRotations + arrayLength;
+            }
+            
+            tempArray[actualRotations] = a[i];
+        }
+        
+    }
+    
+    for(int i=0;i<arrayLength;i++){
+            a[i] = tempArray[i];
+    }
+    
+  }
+
+public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    int n = Integer.parseInt(br.readLine());
+    int[] a = new int[n];
+    for(int i = 0; i < n; i++){
+       a[i] = Integer.parseInt(br.readLine());
+    }
+    int k = Integer.parseInt(br.readLine());
+
+    rotate(a, k);
+    display(a);
+ }
+
+}
+
+Inverse Of an Array:
+import java.io.*;
+import java.util.*;
+
+public class Main{
+  public static void display(int[] a){
+    StringBuilder sb = new StringBuilder();
+
+    for(int val: a){
+      sb.append(val + "\n");
+    }
+    System.out.println(sb);
+  }
+
+  public static int[] inverse(int[] a){
+    // write your code here
+    int arrayLength = a.length;
+    int[] arr1 = new int[arrayLength];
+    
+    int number = 0;
+    int index = 0;
+    
+    for(int i=0;i<arrayLength;i++){
+        index = a[i];
+        number = i;
+        arr1[index] = number;
+    }
+    
+    return arr1;
+  }
+
+public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    int n = Integer.parseInt(br.readLine());
+    int[] a = new int[n];
+    for(int i = 0; i < n; i++){
+       a[i] = Integer.parseInt(br.readLine());
+    }
+
+    int[] inv = inverse(a);
+    display(inv);
+ }
+
+}
+
+Print all subArrays:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int range = scn.nextInt();
+    
+    int[] arr = new int[range];
+    
+    for(int i=0;i<range;i++){
+        arr[i] = scn.nextInt();
+    }
+    
+    for(int i=0;i<range;i++){
+        
+        for(int j=i;j<range;j++){
+            
+            for(int k=i;k<=j;k++){
+                System.out.print(arr[k]+"\t");
+            }
+            System.out.println()
+        }
+        
+    }
+    
+ }
+
+}
+
+Ceil and floor:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int range = scn.nextInt();
+    
+    int[] arr = new int[range];
+    
+    for(int i=0;i<range;i++){
+        arr[i] = scn.nextInt();
+    }
+    
+    int key = scn.nextInt();
+    
+    int l = 0;
+    int h = arr.length - 1;
+    int mid = 0;
+    int limit = 0;
+    
+    while(l!=h-1){
+        
+        mid = (l+h)/2;
+        
+        if(key>arr[mid]){
+            l = mid + 1;
+        }else if(key<arr[mid]){
+            h = mid - 1;
+        }else{
+            System.out.println(arr[l]);
+            System.out.println(arr[h]);
+        }
+    }
+    
+    if(l==(h-1)){
+        System.out.println(arr[l]+"\n"+arr[h]);
+    }
+    
+    
+ }
+
+}
+
+First Index & Last Index:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int range = scn.nextInt();
+    
+    int[] arr1 = new int[range];
+    
+    for(int i=0;i<range;i++){
+        arr1[i] = scn.nextInt();
+    }
+    
+    int low = 0;
+    int high = arr1.length-1;
+    int mid = 0;
+    int max = 0;
+    int min = 0;
+    int checkMin = -1;
+    int checkMax = -1;
+    
+    int key = scn.nextInt();
+    
+    while(low <= high){
+        
+        mid = (low+high)/2;
+        
+        if(key > arr1[mid]){
+            low = mid + 1;
+        }else if(key < arr1[mid]){
+            high = mid - 1;
+        }else{
+            min = mid;
+            max = mid;
+            
+            while(arr1[min]==key && min>=0){
+                if(arr1[min]==key){
+                    checkMin = min;
+                }
+                min--;
+                //System.out.println("Min: "+checkMin);
+            }
+            
+            while(arr1[max]==key && max<=arr1.length-1){
+                if(arr1[max]==key){
+                    checkMax = max;
+                }
+                max++;
+                //System.out.println("Max: "+checkMax);
+            }
+            
+            break;
+        }
+    }
+    
+    System.out.println(checkMin);
+    System.out.println(checkMax);
+    
+ }
+
+}
+
+Subsets Of an Array+++++++
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    
+    int arrayLength = scn.nextInt();
+    
+    int[] arr = new int[arrayLength];
+    
+    for(int i=0;i<arrayLength;i++){
+        arr[i] = scn.nextInt();
+    }
+    
+    int range = (int) Math.pow(2,arrayLength);
+    
+    for(int i=0;i<range;i++){
+        
+        int temp = i;
+        String sum = "";
+        
+        for(int j=arrayLength-1;j>=0;j--){
+            int toggle = temp%2;
+            temp = temp/2;
+            
+            if(toggle==0){
+                sum = "-\t" + sum;
+            }else{
+                sum = arr[j] + "\t" + sum;
+            }
+        }
+        
+        System.out.println(sum);
+        
+    }
+ }
+
+}
+
+2D Arrays Demo:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn  = new Scanner(System.in);
+    
+    int n = scn.nextInt();
+    int m = scn.nextInt();
+    
+    int[][] arr = new int[n][m];
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            arr[i][j] = scn.nextInt();
+        }
+    }
+    
+    for(int i=0;i<arr.length;i++){
+        for(int j=0;j<arr[i].length;j++){
+            System.out.print(arr[i][j]+" ");
+        }
+        System.out.println();
+    }
+    
+    
+ }
+
+}
+
+Matrix Multiplication:
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    
+    int n1 = scn.nextInt();
+    int m1 = scn.nextInt();
+    
+    int[][] arr1 = new int[n1][m1];
+    
+    for(int i=0;i<n1;i++){
+        for(int j=0;j<m1;j++){
+            arr1[i][j] = scn.nextInt();
+        }
+    }
+    
+    int n2 = scn.nextInt();
+    int m2 = scn.nextInt();
+    
+    int[][] arr2 = new int[n2][m2];
+    
+    for(int i=0;i<n2;i++){
+        for(int j=0;j<m2;j++){
+            arr2[i][j] = scn.nextInt();
+        }
+    }
+    
+    int sum = 0;
+    
+    if(m1==n2){
+        
+        int[][] arr3 = new int[n1][m2];
+        
+        for(int i=0;i<n1;i++){
+            for(int j=0;j<m2;j++){
+                int k = 0;
+                for(k=0;k<m1;k++){
+                    sum = sum + arr1[i][k] * arr2[k][j];
+                }
+                //System.out.println("Sum: "+sum+" set at:"+i+" "+j);
+                arr3[i][j] = sum;
+                sum = 0; 
+            }
+        }
+        
+        for(int i=0;i<n1;i++){
+            for(int j=0;j<m2;j++){
+                System.out.print(arr3[i][j]+" ");
+            }
+         System.out.println();
+        }
+        
+    }else{
+        System.out.println("Invalid input");
+    }
+    
+ }
+
+}
+
+Wave Traversal
+
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    int m = scn.nextInt();
+    
+    int[][] arr = new int[n][m];
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            arr[i][j] = scn.nextInt();
+        }
+    }
+    
+    for(int i=0;i<m;i++){
+        if(i%2==0){
+            
+            for(int j=0;j<n;j++){
+                //System.out.println(arr[j][i]+" "+j+" "+i);
+                System.out.println(arr[j][i]);
+            }
+            
+        }else{
+            
+            for(int j=n-1;j>=0;j--){
+                //System.out.println(arr[j][i]+" "+j+" "+i);
+                System.out.println(arr[j][i]);
+            }
+            
+        }
+    }
+    
+ }
+
+}
+
+Exit point of a matrix:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        
+        int[][] arr = new int[n][m];
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                System.out.print(arr[i][j]+" ");
+            }
+            System.out.println();
+        }
+        
+        int i=0;
+        int j=0;
+        int parity = 1;
+        
+        while( (i>=0 && i<n) || (j>=0 && j<m)){
+            
+            System.out.println("i: "+i+" j: "+j+" parity: "+parity);
+            
+            if(arr[i][j]==0){
+                if(parity==1){
+                    j++;
+                }else if(parity==2){
+                    i++;
+                }else if(parity==3){
+                    j--;
+                }else if(parity==4){
+                    i--;
+                }
+                
+            }else{
+                
+                if(parity==1){
+                    i++;
+                }else if(parity==2){
+                    j--;
+                }else if(parity==3){
+                    i--;
+                }else if(parity==4){
+                    j++;
+                }
+                
+                if(parity == 4){
+                    parity=1;
+                }else{
+                    parity++;
+                }
+                
+            }
+        }
+        
+        if(i<0){
+            System.out.println(i+1);
+            System.out.println(j);
+        }else if(i>n-1){
+            System.out.println(i-1);
+            System.out.println(j);
+        }else if(j<0){
+            System.out.println(i);
+            System.out.println(j+1);
+        }else{
+            System.out.println(i);
+            System.out.println(j-1);
+        }
+        
+    }
+
+}
+
+
+Spiral Display++++++
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        
+        int[][] arr = new int[n][m];
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        int minr = 0;
+        int minc = 0;
+        int maxr = arr.length-1;
+        int maxc = arr[0].length-1;
+        int tne = m*n;
+        int cnt = 0;
+        
+        while(cnt<tne){
+            
+            for(int i = minr , j = minc; i<=maxr && cnt<tne; i++){
+                System.out.println(arr[i][j]);
+                cnt++;
+            }
+            minc++;
+            
+            for(int i = maxr , j = minc; j<=maxc && cnt<tne; j++){
+                System.out.println(arr[i][j]);
+                cnt++;
+            }
+            maxr--;
+            
+            for(int i = maxr , j = maxc; i>=minr && cnt<tne; i--){
+                System.out.println(arr[i][j]);
+                cnt++;
+            }
+            maxc--;
+            
+            for(int i = minr , j = maxc; j>=minc && cnt<tne; j--){
+                System.out.println(arr[i][j]);
+                cnt++;
+            }
+            minr++;
+        }
+        
+    }
+
+}
+
+Rotate by 90 Degree:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[][] arr = new int[n][n];
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        transpose(arr);
+        //display(arr);
+        //System.out.println();
+        rotate(arr);
+        display(arr);
+        
+    }
+    
+    public static void transpose(int[][] arr){
+        
+        for(int i=0;i<arr.length;i++){
+            for(int j=i;j<arr[0].length;j++){
+                //System.out.println(i+" "+j+" "+arr[i][j]+" "+arr[j][i]);
+                int temp = arr[j][i]; 
+                arr[j][i] = arr[i][j]; 
+                arr[i][j] = temp;
+            }
+           /* System.out.println();
+            display(arr);*/
+        }
+    }
+    
+    public static void rotate(int[][] arr){
+        for(int i=0, k=arr[0].length-1; i<k; i++, k--){
+            
+            for(int j=0; j<arr[0].length ;j++){
+                
+                int temp = arr[j][i]; 
+                arr[j][i] = arr[j][k]; 
+                arr[j][k] = temp; 
+            }
+            
+        }
+    }
+
+    public static void display(int[][] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+}
+
+Diagonal traversal
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        
+        int n = scn.nextInt();
+        
+        int[][] arr = new int[n][n];
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        int iCount = 0;
+
+        while(iCount<=n){
+            for(int i=0, j=iCount ; i < n-iCount && j<n ;i++ , j++){
+                System.out.println(arr[i][j]);
+            }
+            iCount++;
+        }
+    }
+
+}
+
+Saddle Point:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn  = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[][] arr = new int[n][n];
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        int saddlePoint = 0;
+        int rowFlag = 0;
+        int colFlag = 0;
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                int psp = arr[i][j];
+                
+                //System.out.println("PSP: "+psp);
+                
+                for(int k=0;k<n;k++){
+                    //System.out.println("Row value "+arr[i][k]+" for "+i+" "+k);
+                    if(psp>arr[i][k]){
+                        rowFlag = 1;
+                        break;
+                    }
+                }
+                
+                if(rowFlag==0){
+                    for(int l=0;l<n;l++){
+                        //System.out.println("Column value "+arr[l][j]+" for "+l+" "+j);
+                        if(psp<arr[l][j]){
+                            colFlag = 1;
+                            break;
+                        }
+                    }
+                }
+                
+                if(rowFlag==0 && colFlag==0){
+                    saddlePoint = psp;
+                    break;
+                }else{
+                    rowFlag = 0;
+                    colFlag = 0;
+                }
+                
+            }
+        }
+        
+        if(saddlePoint!=0){
+            System.out.println(saddlePoint);
+        }else{
+            System.out.println("Invalid input");
+        }
+        
+    }
+
+}
+
+Search ina 2-D sorted Array:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[][] arr = new int[n][n];
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        int key = scn.nextInt();
+        //System.out.println(key);
+        
+        int i = 0;
+        int j = n-1;
+        
+        //System.out.println("arr of i j at: "+i+" "+j);
+        
+        int row = -1;
+        int column = -1;
+        
+        while(i>=0 && i<n && j>=0 && j<n){
+            
+            if(arr[i][j]==key){
+                row=i;
+                column=j;
+                break;
+            }
+            
+            //System.out.println("arr of i j at: "+arr[i][j]+" "+i+" "+j);
+            
+            if(arr[i][j] > key){
+                j--;
+            }else{
+                i++;
+            }
+            
+        }
+        
+        if(row!=-1 && column!=-1){
+            System.out.println(row);
+            System.out.println(column);
+        }else{
+            System.out.println("Not Found");
+        }
+        
+    }
+
+}
+
+
+***************Shell Rotate*************************
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        
+        int[][] arr = new int[n][m];
+        for(int i = 0;i<arr.length;i++){
+            for(int j=0;j<arr[0].length;j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        int s = scn.nextInt();
+        int r = scn.nextInt();
+        
+        rotateShell(arr, s, r);
+        display(arr);
+        
+    }
+    
+    public static void rotateShell(int[][] arr, int s, int r){
+        int[] oned = fillOnedFromShell(arr,s);
+        rotate(oned, r);
+        fillShellFromOned(arr,s,oned);
+    }
+    
+    public static void rotate(int[] oned, int r){
+        r = r%oned.length;
+        
+        if(r<0){
+            r = r + oned.length;
+        }
+    
+        reverse(oned, 0, oned.length-r-1);
+        reverse(oned, oned.length-r, oned.length-1);
+        reverse(oned, 0, oned.length-1);
+        
+    }
+    
+    public static void reverse(int[] oned, int li, int ri){
+        
+        while(li < ri){
+            int temp = oned[li];
+            oned[li] = oned[ri];
+            oned[ri] = temp;
+            
+            li++;
+            ri--;
+        }
+        
+    }
+    
+    public static int[] fillOnedFromShell(int[][] arr,int s){
+        
+        int minr = s-1;
+        int minc = s-1;
+        int maxr = arr.length - s;
+        int maxc = arr[0].length - s;
+        
+        int sz = 2*(maxr - minr + maxc - minc);
+        
+        int[] oned = new int[sz];
+        
+        //lw
+        int idx = 0;
+        
+        for(int i = minr, j = minc; i<= maxr; i++){
+            oned[idx] = arr[i][j];
+            idx++;
+        }
+        
+        //bw
+        for(int i = maxr, j= minc+1; j<= maxc; j++){
+            oned[idx] = arr[i][j];
+            idx++;
+        }
+        
+        //rw
+        for(int i = maxr-1, j = maxc; i>=minr; i--){
+            oned[idx] = arr[i][j];
+            idx++;
+        }
+        
+        //tw
+        for(int i = minr, j = maxc-1; j>= minc+1; j--){
+            oned[idx] = arr[i][j];
+            idx++;
+        }
+        
+        return oned;
+        
+    }
+    
+    public static void fillShellFromOned(int[][] arr, int s, int[] oned){
+        int minr = s-1;
+        int minc = s-1;
+        int maxr = arr.length - s;
+        int maxc = arr[0].length - s;
+        
+        //lw
+        int idx = 0;
+        
+        for(int i = minr, j = minc; i<= maxr; i++){
+            arr[i][j] = oned[idx];
+            idx++;
+        }
+        
+        //bw
+        for(int i = maxr, j= minc+1; j<= maxc; j++){
+            arr[i][j] = oned[idx];
+            idx++;
+        }
+        
+        //rw
+        for(int i = maxr-1, j = maxc; i>=minr; i--){
+            arr[i][j] = oned[idx];
+            idx++;
+        }
+        
+        //tw
+        for(int i = minr, j = maxc-1; j>= minc+1; j--){
+            arr[i][j] = oned[idx];
+            idx++;
+        }
+    }
+
+    public static void display(int[][] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+}
+
+Print decreasing numbers - recursion intro
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        printDecreasing(n);
+        
+    }
+
+    public static void printDecreasing(int n){
+        if(n<=0){
+            return;
+        }
+        
+        System.out.println(n);
+        printDecreasing(n-1);
+    }
+
+}
+
+Pring increasing numbers
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        printIncreasing(n);
+        
+    }
+
+    public static void printIncreasing(int n){
+        
+        if(n==0){
+            return;
+        }
+        
+        printIncreasing(n-1);
+        
+        System.out.println(n);
+        
+    }
+
+}
+
+Print Increasing Decreasing
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        pdi(n);
+        
+    }
+
+    public static void pdi(int n){
+        
+        if(n==0){
+            return;
+        }
+        
+        System.out.println(n);
+        pdi(n-1);
+        System.out.println(n);
+        
+    }
+
+}
+
+Factorial
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int num = factorial(n);
+        System.out.println(num);
+    }
+
+    public static int factorial(int n){
+        if(n==0){
+            return 1;
+        }
+        
+        //System.out.println(n);
+        //int num =  n * factorial(n-1);
+        //System.out.println("Num: "+num);
+        return n * factorial(n-1);
+    }
+
+}
+
+Power Linear
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int x = scn.nextInt();
+        int n = scn.nextInt();
+        
+        int num = power(x,n);
+        System.out.println(num);
+    }
+
+    public static int power(int x, int n){
+        
+        if(n==0){
+            return 1;
+        }
+        
+        return x * power(x,n-1);
+    }
+
+}
+
+Power Logarithmic
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int x = scn.nextInt();
+        int n = scn.nextInt();
+        int num = power(x,n);
+        System.out.println(num);
+        
+    }
+
+    public static int power(int x, int n){
+        if(n==0){
+            return 1;
+        }
+        
+        int xnp = power(x,n/2);
+        int xnpb2 = xnp * xnp;
+        
+        if(n%2==1){
+            xnpb2 = xnpb2 * x;
+        }
+        
+        return xnpb2;
+        
+    }
+
+}
+
+Print preorder, Inorder, Postorder
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        pzz(n);
+    }
+
+    public static void pzz(int n){
+        
+        if(n==0){
+            return;
+        }
+        
+        System.out.print(n + " ");
+        pzz(n-1);
+        System.out.print(n + " ");
+        pzz(n-1);
+        System.out.print(n + " ");
+        
+    }
+
+}
+
+Towers Of Hanoi:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int t1id = scn.nextInt();
+        int t2id = scn.nextInt();
+        int t3id = scn.nextInt();
+        toh(n,t1id,t2id,t3id);
+    }
+
+    public static void toh(int n, int t1id, int t2id, int t3id){
+        if(n==0){
+            return;
+        }
+        
+        toh(n-1, t1id, t3id, t2id);
+        System.out.println(n+"["+t1id+" -> "+t2id+"]");
+        toh(n-1, t3id, t2id, t1id);
+    }
+
+}
+
+Display array using recursion:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i] = scn.nextInt();
+        }
+        
+        displayArr(arr,n-1);
+    }
+
+    public static void displayArr(int[] arr, int idx){
+        if(idx<0){
+            return;
+        }
+        
+        displayArr(arr,idx-1);
+        System.out.println(arr[idx]);
+    }
+
+}
+
+Dsiplay array reverse:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i] = scn.nextInt();
+        }
+        
+        displayArrReverse(arr, n-1);
+        
+    }
+
+    public static void displayArrReverse(int[] arr, int idx) {
+        
+        if(idx<0){
+            return;
+        }
+        
+        System.out.println(arr[idx]);
+        displayArrReverse(arr,idx-1);
+
+    }
+
+}
+
+
+Max of an array:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    
+    public static int max = 0;
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i] = scn.nextInt();
+        }
+        
+        int max = maxOfArray(arr,0);
+        
+        System.out.println(max);
+    }
+
+    public static int maxOfArray(int[] arr, int idx){
+        
+        if(idx>=arr.length){
+            return 1;
+        }else{
+            //System.out.println("array val: "+arr[idx]+" at: "+idx);
+            
+            if(arr[idx]>max){
+                max = arr[idx];
+                //System.out.println(max);
+            }
+            
+            maxOfArray(arr,idx+1);
+        }
+        
+        return max;
+        
+    }
+
+}
+
+Attempt 2:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    
+    //public static int max = 0;
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i] = scn.nextInt();
+        }
+        
+        int max = maxOfArray(arr,0);
+        
+        System.out.println(max);
+    }
+
+    public static int maxOfArray(int[] arr, int idx){
+        
+       if(idx == arr.length-1){
+           return arr[idx];
+       }
+       
+       int maxis = maxOfArray(arr,idx+1);
+       
+       if(maxis > arr[idx]){
+           return maxis;
+       }else{
+           return arr[idx];
+       }
+        
+    }
+
+}
+
+Finding the first index:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i] = scn.nextInt();
+        }
+        
+        int x = scn.nextInt();
+        
+        int firstIndex = firstIndex(arr,0,x);
+        
+        System.out.println(firstIndex);
+    }
+
+    public static int firstIndex(int[] arr, int idx, int x){
+        if(idx>arr.length-1){
+            return -1;
+        }
+        
+        int index = firstIndex(arr,idx+1,x);
+        
+        //System.out.println("index: "+index+" "+arr[idx]+" "+x);
+        
+        if(arr[idx]==x){
+            return idx;
+        }else if(index==-1){
+            return -1;
+        }else{
+            return index;
+        }
+        
+    }
+
+}
+
+Attempt 2:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i] = scn.nextInt();
+        }
+        
+        int x = scn.nextInt();
+        
+        int firstIndex = firstIndex(arr,0,x);
+        
+        System.out.println(firstIndex);
+    }
+
+    public static int firstIndex(int[] arr, int idx, int x){
+        if(idx>arr.length-1){
+            return -1;
+        }
+        
+        //System.out.println("index: "+index+" "+arr[idx]+" "+x);
+        
+        if(arr[idx]==x){
+            return idx;
+        }else{
+            int index = firstIndex(arr,idx+1,x);
+            return index;
+        }
+        
+    }
+
+}
+
+Last index:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n;i++){
+            arr[i] = scn.nextInt();
+        }
+        
+        int x = scn.nextInt();
+        
+        int lastIndex = lastIndex(arr,n-1,x);
+        
+        System.out.println(lastIndex);
+    }
+
+    public static int lastIndex(int[] arr, int idx, int x){
+        if(idx<0){
+            return -1;
+        }
+        
+        //System.out.println(idx+" "+" "+x+" "+arr[idx]);
+        
+        if(arr[idx]==x){
+            return idx;
+        }else{
+            int index = lastIndex(arr,idx-1,x);
+            return index;
+        }
+    }
+
+}
+
+All indices of array:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(br.readLine());
+        }
+        int x = Integer.parseInt(br.readLine());
+        int[] iarr = allIndices(arr, x, 0, 0);
+
+        if(iarr.length == 0){
+            System.out.println();
+            return;
+        }
+
+        for(int i = 0; i < iarr.length; i++){
+            System.out.println(iarr[i]);
+        }
+    }
+
+    public static int[] allIndices(int[] arr, int x, int idx, int fsf) {
+        // write ur code here
+        if(idx>arr.length-1){
+            int[] iarr = new int[fsf];
+            return iarr;
+        }
+        
+        if(arr[idx]==x){
+            fsf++;
+            int[] isarr = allIndices(arr, x, idx+1,fsf);
+            //System.out.println("values index obtained when idx==x: "+idx+" "+fsf+" "+Arrays.toString(isarr));
+            isarr[fsf-1] = idx;
+            fsf = fsf-1;
+            return isarr;
+        }else{
+            int[] isarr = allIndices(arr, x, idx+1,fsf); 
+            //System.out.println("values index obtained when idx!=x: "+idx+" "+fsf+" "+Arrays.toString(isarr));
+            return isarr;
+        }
+        
+       /* int[] isarr = allIndices(arr, x, idx+1,fsf); 
+        
+        if(arr[idx]==x){
+            
+        }*/
+        
+    }
+
+}
+
+Get subsequences of a string:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        String str = scn.next();
+        ArrayList<String> res = gss(str);
+        System.out.println(res);
+    }
+
+    public static ArrayList<String> gss(String str) {
+        if(str.length() == 0){
+            ArrayList<String> bres = new ArrayList<>();
+            bres.add("");
+            return bres;
+        }
+        
+        char ch = str.charAt(0);
+        String ros = str.substring(1);
+        ArrayList<String> rres = gss(ros);
+        
+        //System.out.println("Input provided: "+rres+" Character: "+ch+" Rest: "+ros);
+        
+        ArrayList<String> mres = new ArrayList<>();
+        for(String rstr: rres){
+            mres.add("" + rstr);
+        }
+        
+        for(String rstr: rres){
+            mres.add(ch + rstr);
+        }
+        
+        //System.out.println("Output created: "+mres);
+        
+        return mres;
+        
+    }
+
+}
+
+Get KPC
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        String str = scn.next();
+        
+        ArrayList<String> kpc = getKPC(str);
+        
+        System.out.println(kpc);
+
+    }
+    
+    static String[] codes = {".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vwx", "yz"};
+
+    public static ArrayList<String> getKPC(String str) {
+        
+        if(str.length() == 0){
+            ArrayList<String> bres = new ArrayList<>();
+            bres.add("");
+            return bres;
+        }
+        
+        char firstChar = str.charAt(0);
+        String restOfString = str.substring(1);
+        
+        ArrayList<String> prevResult = getKPC(restOfString);
+        
+        ArrayList<String> finalKpc = new ArrayList<>();
+        
+        String codesForch = codes[firstChar - '0'];
+        for(int i=0;i < codesForch.length() ; i++){
+            char chcode = codesForch.charAt(i);
+            
+            for(String rstr: prevResult){
+                finalKpc.add(chcode+rstr);
+            }
+        }
+        
+        return finalKpc;
+    }
+
+}
+
+Get stairs path:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        ArrayList<String> paths = getStairPaths(n);
+        System.out.println(paths);
+    }
+
+    public static ArrayList<String> getStairPaths(int n) {
+        if(n == 0){
+            ArrayList<String> bres = new ArrayList<>();
+            bres.add("");
+            return bres;
+        }else if(n < 0){
+            ArrayList<String> bres = new ArrayList<>();
+            return bres;
+        }
+        
+        ArrayList<String> paths1 = getStairPaths(n-1);
+        ArrayList<String> paths2 = getStairPaths(n-2);
+        ArrayList<String> paths3 = getStairPaths(n-3);
+        ArrayList<String> paths = new ArrayList<>();
+        
+        for(String path:paths1){
+            paths.add(1+path);
+        }
+        for(String path:paths2){
+            paths.add(2+path);
+        }
+        for(String path:paths3){
+            paths.add(3+path);
+        }
+        
+        return paths;
+
+    }
+
+}
+
+
+Get Maze Paths:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        ArrayList<String> mazePaths = getMazePaths(1,1,n,m);
+        
+        System.out.println(mazePaths);
+    }
+
+    // sr - source row
+    // sc - source column
+    // dr - destination row
+    // dc - destination column
+    public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
+        
+        if(sr == dr && sc ==dc){
+            ArrayList<String> fres = new ArrayList<>();
+            fres.add("");
+            return fres;
+        }
+        
+        ArrayList<String> hpaths = new ArrayList<>();
+        ArrayList<String> vpaths = new ArrayList<>();
+        
+        if(sc < dc){
+            hpaths = getMazePaths(sr , sc+1, dr, dc);
+        }
+        
+        if(sr < dr){
+            vpaths = getMazePaths(sr+1, sc, dr, dc);
+        }
+        
+        ArrayList<String> paths = new ArrayList<>();
+        
+        for(String hpath: hpaths){
+            paths.add("h" + hpath);
+        }
+        
+        for(String vpath: vpaths){
+            paths.add("v" + vpath);
+        }
+        
+        return paths;
+    }
+
+}
+
+Get maze paths with jumps:
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        ArrayList<String> paths = getMazePaths(1,1,n,m);
+        System.out.println(paths);
+    }
+
+    // sr - source row
+    // sc - source column
+    // dr - destination row
+    // dc - destination column
+    public static ArrayList<String> getMazePaths(int sr, int sc, int dr, int dc) {
+        
+        if(sr == dr && sc == dc){
+            ArrayList<String> bres = new ArrayList<>();
+            bres.add("");
+            return bres;
+        }
+        
+        ArrayList<String> paths = new ArrayList<>();
+        
+        for(int ms=1; ms<=dc - sc; ms++){
+            ArrayList<String> hpaths = getMazePaths(sr, sc + ms, dr, dc);
+            for(String hpath: hpaths){
+                paths.add("h"+ ms + hpath);
+            }
+        }
+        
+        for(int ms = 1; ms<=dr - sr; ms++){
+            ArrayList<String> vpaths = getMazePaths(sr + ms, sc, dr, dc);
+            for(String vpath: vpaths){
+                paths.add("v"+ ms + vpath);
+            }
+        }
+        
+        for(int ms = 1; ms<= dr - sr && ms <= dc - sc; ms++){
+            ArrayList<String> dpaths = getMazePaths(sr + ms, sc + ms, dr, dc);
+            for(String dpath: dpaths){
+                paths.add("d" + ms + dpath);
+            }
+        }
+        
+        return paths;
+    }
+
+}
